@@ -1,5 +1,5 @@
 .NavbarItems{
-    background:linear-gradient(90deg,rgb(110,94,254) 0%,rgb(73,63,252) 100%);
+background-color: #1f1f38;
 height: 80px;
 display: flex;
 justify-content: center;
@@ -8,7 +8,7 @@ font-size: 1.2rem;
 }
 
 .navbar_logo{
-    color:#fff;
+    color:#ffffff;
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
@@ -132,3 +132,14 @@ Button{
 }
 
 }
+
+.btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
