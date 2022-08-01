@@ -16,10 +16,9 @@ class Home extends Component{
     }
     
 
-    getMessages = () => {
-        console.log("messagess");
+    getReceipts = () => {
         this.setState({loading:true});
-        onValue(ref(db,'/messages'),(snapshot)=>{
+        onValue(ref(db,'/receipts'),(snapshot)=>{
           this.setState({loading:false});
             var teachers=[]
             console.log(snapshot.val());
@@ -54,7 +53,7 @@ class Home extends Component{
                   this.setState({loading:false});
                   let uid=snapshot.val();
                   if (user.uid===uid){ 
-                    this.getMessages();
+                   this.getReceipts();
                 }else{
                   this.props.history.push({pathname:"/"});
                 }
@@ -68,24 +67,21 @@ class Home extends Component{
      
    render(){
     const columns=[
-        {title:"Phone No.",field:"phonenumber"},
-        {title:"Message",field:"message"} 
+        {title:"Receipt ID",field:"receiptID"},
+        {title:"Teacher ID",field:"teacherID"} ,
+        {title:"Paper ID",field:"paperID"},
+        {title:"teacher Name",field:"teacherName"} ,
+        {title:"Subject",field:"subject"},
+        {title:"Paper Title",field:"paperName"},
+        {title:"Date",field:"date"},
+        {title:"Used",field:"used"},
+       
     ]
-    const addFunction=()=>{
-        console.log("add teacher");
-        window.location = '/addteacher';
-    }
-      const openPapers=(e)=>{
-      console.log(e.tableData.id);
-      console.log(this.state.teachersKeys[e.tableData.id]);
-      //window.location = '/mypapers';
-      this.props.history.push({pathname:"/mypapers",id:this.state.teachersKeys[e.tableData.id]})
-    }
     
-    const deleteMessage=(e)=>{
+    const deleteReceipt=(e)=>{
     console.log(e.tableData.id)
     console.log(this.state.messagesKeys[e.tableData.id]);
-    remove(ref(db,"/messages/"+this.state.messagesKeys[e.tableData.id]));
+    remove(ref(db,"/receipts/"+this.state.messagesKeys[e.tableData.id]));
     }
 
     return(
@@ -94,7 +90,7 @@ class Home extends Component{
        {this.state.loading ?<div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
     <Spinner animation='border'></Spinner>
 </div> : 
-            <Table style={{display: 'flex',  justifyContent:'center', alignItems:'center'}} title="Messages" data={this.state.data} columns={columns} delete={deleteMessage} ></Table>
+            <Table style={{display: 'flex',  justifyContent:'center', alignItems:'center'}} title="Receipts" data={this.state.data} columns={columns}  delete={deleteReceipt} ></Table>
              }
 
 

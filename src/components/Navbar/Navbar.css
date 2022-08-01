@@ -10,7 +10,7 @@ font-size: 1.2rem;
 .navbar_logo{
     color:#ffffff;
     justify-self: start;
-    margin-left: 20px;
+    margin-left:20px;
     cursor: pointer;
 }
 
@@ -21,7 +21,7 @@ font-size: 1.2rem;
 
 .nav-menu{
     display: grid;
-    grid-template-columns: repeat(5,auto);
+    grid-template-columns: repeat(6,auto);
     grid-gap:10px;
     list-style: none;
     text-align: center;
@@ -136,7 +136,7 @@ Button{
 .btn {
     background-color: #4CAF50; /* Green */
     border: none;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;

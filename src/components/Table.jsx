@@ -4,27 +4,31 @@ class Table extends Component {
     
     render(){
         
-        const data=[
-            {name:"shefna",email:"shefna@gmail.com",nationalid:"12345678901234"},
-            {name:"sherif medhat",email:"sherif@gmail.com",nationalid:"12345678901234"},
-            {name:"ahmed emad",email:"ahmedemad@gmail.com",nationalid:"12345678901234"}
-        ]
-        const columns=[
-            {title:"Name",field:"name"},
-            {title:"Email",field:"email"},
-            {title:"National ID",field:"nationalid"}
-        ]
     return (
-        <div className="table">
             <MaterialTable title={this.props.title}
-            data={data}
-            columns={columns}
+            data={this.props.data}
+            columns={this.props.columns}
             options={{
                 filtering:true,
                 exportButton:true
             }}
+            actions={[{
+                icon:"add_box",
+                tooltip:"Add",
+                position:"toolbar",
+                onClick:()=>
+                    this.props.addFunction()
+                
+            }]}
+            onRowClick={(event,rowData)=>
+                this.props.selected(rowData)
+            }
+            editable={{onRowDelete:(selectedRow)=>new Promise((resolve,reject)=>{
+            setTimeout(()=>resolve(),1000);
+            this.props.delete(selectedRow);
+            })}}
             ></MaterialTable>
-        </div>
+     
     )
 }}
 

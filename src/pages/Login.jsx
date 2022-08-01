@@ -1,34 +1,37 @@
 import React,{useState} from 'react';
 import {signInWithEmailAndPassword} from "firebase/auth";
-import {createUserWithEmailAndPassword} from 'firebase/auth';
 import {auth} from '../firebase-config'
+import {Spinner} from 'react-bootstrap';
 
 function Login({Login,error}) {
     const [details,setDetails]=useState({email:"",password:""});
-
-    function submitHandler(){
-        console.log("dddd");
-       
-    }
+    var [loading,setLoading]=useState(false);
+   
     const login=async()=>{
         try{
             console.log(details.email);
             console.log(details.password);
-            const user=await createUserWithEmailAndPassword(
+            setLoading(loading=true)
+            const user=await signInWithEmailAndPassword(
                 auth,
                 details.email,
                 details.password,
             );
-           
+            console.log("success");
+            setLoading(loading=false)
+            window.location = '/teachers';
             console.log(user);
         }catch(error){
+            setLoading(loading=false)
             console.log(error.message);
             alert(error.message);
         }
     }
     return (
-       
-       <form  onSubmit={login}>
+        <>
+       {loading ? <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
+       <Spinner animation='border'></Spinner>
+   </div> : <div >
            <div className="container">
            <div className='row'>
        <div className='col-10 mx-auto text-center text-title text-uppercase pt-5'>
@@ -43,14 +46,15 @@ function Login({Login,error}) {
                     <label htmlFor="email">Password:</label>
                     <input className="solidborder" type="password" name="password" id="password" onChange={e=>setDetails({...details,password:e.target.value})} value={details.password}/>
                 </div>
-                <input  className='btn btn-primary' type="submit" value="Login"></input>
+                <input onClick={login} className='btn btn-primary' type="submit" value="Login"></input>
                 </div>
            </div>
            </div>
            </div>
       
-       </form>
-
+       </div> }
+       
+        </>
     )
 }
 

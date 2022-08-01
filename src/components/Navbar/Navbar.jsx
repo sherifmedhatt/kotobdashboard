@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {MenuItems} from "./MenuItems"
 import './Navbar.css'
+import logo from "./kotoblogo.png";
 export default class Navbar extends Component {
     state={clicked:false}
     handleClick=()=>{
@@ -8,9 +9,10 @@ export default class Navbar extends Component {
     }
     render() {
         return (
-          <nav className="NavbarItems">
-              <h3 className="Navbar-logo">Kotob Bookstore
-              <i className="fab fa-react"></i>
+         
+            <nav className="NavbarItems">
+            <img className="menu-icon" src={logo} width={100} height={70}></img>
+            <h3 style={{color:'white'}} className="Navbar-logo">
               </h3>
               <div className="menu-icon" onClick={this.handleClick}>
                   <i className={this.state.clicked? 'fas fa-times':'fas fa-bars'}></i>
@@ -24,8 +26,11 @@ export default class Navbar extends Component {
                               </a></li>
                       )
                   })}
+                  <li><a href='#' onClick={this.props.logAction} className='nav-links'>{this.props.signing}</a></li>
+                  
               </ul>
           </nav>
+             
         )
     }
 }
