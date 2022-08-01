@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/kotobdashboard/static/css/main.adeea6b0.chunk.css",
+    "main.js": "/kotobdashboard/static/js/main.9726b99c.chunk.js",
+    "main.js.map": "/kotobdashboard/static/js/main.9726b99c.chunk.js.map",
+    "runtime-main.js": "/kotobdashboard/static/js/runtime-main.b8038797.js",
+    "runtime-main.js.map": "/kotobdashboard/static/js/runtime-main.b8038797.js.map",
+    "static/css/2.4f2cacb2.chunk.css": "/kotobdashboard/static/css/2.4f2cacb2.chunk.css",
+    "static/js/2.8499d5c0.chunk.js": "/kotobdashboard/static/js/2.8499d5c0.chunk.js",
+    "static/js/2.8499d5c0.chunk.js.map": "/kotobdashboard/static/js/2.8499d5c0.chunk.js.map",
+    "static/js/3.1815a65e.chunk.js": "/kotobdashboard/static/js/3.1815a65e.chunk.js",
+    "static/js/3.1815a65e.chunk.js.map": "/kotobdashboard/static/js/3.1815a65e.chunk.js.map",
+    "static/js/4.5854e762.chunk.js": "/kotobdashboard/static/js/4.5854e762.chunk.js",
+    "static/js/4.5854e762.chunk.js.map": "/kotobdashboard/static/js/4.5854e762.chunk.js.map",
+    "static/js/5.fc33da5b.chunk.js": "/kotobdashboard/static/js/5.fc33da5b.chunk.js",
+    "static/js/5.fc33da5b.chunk.js.map": "/kotobdashboard/static/js/5.fc33da5b.chunk.js.map",
+    "index.html": "/kotobdashboard/index.html",
+    "precache-manifest.28e489055d86ecc8244f66b7962a1476.js": "/kotobdashboard/precache-manifest.28e489055d86ecc8244f66b7962a1476.js",
+    "service-worker.js": "/kotobdashboard/service-worker.js",
+    "static/css/2.4f2cacb2.chunk.css.map": "/kotobdashboard/static/css/2.4f2cacb2.chunk.css.map",
+    "static/css/main.adeea6b0.chunk.css.map": "/kotobdashboard/static/css/main.adeea6b0.chunk.css.map",
+    "static/js/2.8499d5c0.chunk.js.LICENSE.txt": "/kotobdashboard/static/js/2.8499d5c0.chunk.js.LICENSE.txt",
+    "static/js/3.1815a65e.chunk.js.LICENSE.txt": "/kotobdashboard/static/js/3.1815a65e.chunk.js.LICENSE.txt",
+    "static/js/4.5854e762.chunk.js.LICENSE.txt": "/kotobdashboard/static/js/4.5854e762.chunk.js.LICENSE.txt",
+    "static/js/5.fc33da5b.chunk.js.LICENSE.txt": "/kotobdashboard/static/js/5.fc33da5b.chunk.js.LICENSE.txt",
+    "static/js/main.9726b99c.chunk.js.LICENSE.txt": "/kotobdashboard/static/js/main.9726b99c.chunk.js.LICENSE.txt",
+    "static/media/kotoblogo.png": "/kotobdashboard/static/media/kotoblogo.2e7c5883.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b8038797.js",
+    "static/css/2.4f2cacb2.chunk.css",
+    "static/js/2.8499d5c0.chunk.js",
+    "static/css/main.adeea6b0.chunk.css",
+    "static/js/main.9726b99c.chunk.js"
+  ]
+}
